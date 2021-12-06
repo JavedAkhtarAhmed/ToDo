@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Dark_blue"
+    android:orientation="vertical"
+    android:paddingBottom="30dp">
+
+
+    <EditText
+        android:id="@+id/etDialogueDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/bg_curveshape"
+        android:gravity="center"
+        android:hint="Description....\n"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="50"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textColorHint="#959393"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginTop="20dp" />
+
+
+    <Button
+        android:id="@+id/btnSetDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etDialogueDescription"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_curveshape"
+        android:backgroundTint="#545B8A"
+        android:text="Set Date"
+        app:shapeAppearanceOverlay="@drawable/roundbutton" />
+
+    <TextView
+        android:id="@+id/tvSetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSetDate"
+        android:layout_alignStart="@id/btnSetDate"
+        android:layout_alignEnd="@id/btnSetTime"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:shadowRadius="@integer/material_motion_duration_long_1"
+        android:shadowColor="@color/white"
+        android:background="@drawable/bg_curveshape"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnSetTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSetDate"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_curveshape"
+        android:backgroundTint="#545B8A"
+        android:text="Set Date"
+        app:shapeAppearanceOverlay="@drawable/roundbutton" />
+    <TextView
+        android:id="@+id/tvSetTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSetTime"
+        android:layout_gravity="center"
+        android:layout_alignStart="@id/btnSetDate"
+        android:layout_alignEnd="@id/btnSetTime"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_curveshape"
+        android:clickable="true"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSetTime"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/btn_yes"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_curveshape"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Yes"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/btn_no"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/bg_curveshape"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="No"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
